@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">MeloVibes</string>
-    <string name="logoimage"></string>
+    <string name="logoimage">LOGO</string>
     <string name="SStext">Melodies That Gives You Vibes</string>
+    <string name="slider_desc">slider</string>
+    <string name="back_button">back button</string>
+    <string name="cover_art">cover art</string>
+    <string name="PREV">TODO</string>
+    <string name="next">NEXT</string>
+    <string name="pause">PAUSE</string>
+    <string name="song_name">SONG NAME</string>
+    <string name="album_name">ALBUM NAME</string>
+    <string name="playing_now">Playing Now</string>
+    <string name="shuffle">shuffle</string>
+    <string name="repeat">repeat</string>
 </resources>
