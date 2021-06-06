@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MeloVibes</string>
+    <string name="logoimage"></string>
+    <string name="SStext">Melodies That Gives You Vibes</string>
 </resources>
