@@ -9,7 +9,7 @@
         android:roundIcon="@drawable/logo1"
         android:supportsRtl="true"
         android:theme="@style/Theme.Music">
-        <activity android:name=".HomePageActivity"></activity>
+        <activity android:name=".HomePageActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
