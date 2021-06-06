@@ -18,10 +18,9 @@ public class MainActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-//                Intent i = new Intent(MainActivity.this,HomePageActivity.class);
-//                startActivity(i);
-//                finish();
-                Toast.makeText(MainActivity.this, "Testing",Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(MainActivity.this,HomePageActivity.class);
+                startActivity(i);
+                finish();
             }
         }, timeOut);
     }
