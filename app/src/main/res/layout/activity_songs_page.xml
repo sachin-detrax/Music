@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/background_color">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:animateLayoutChanges="false"
+        android:background="@color/background_color"
         android:theme="@style/Theme.Music.AppBarOverlay"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -27,7 +28,7 @@
                 android:layout_height="38dp"
                 android:layout_gravity="start|center_vertical|end"
                 android:layout_marginStart="12dp"
-                android:background="#00FFFFFF"
+                android:background="@color/background_color"
                 android:contentDescription="@string/logoimage"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/textViewMV"
@@ -60,7 +61,7 @@
                 android:layout_gravity="center|center_vertical"
                 android:fontFamily="@font/alegreya_sc"
                 android:text="@string/app_name"
-                android:textColor="#000000"
+                android:textColor="#FFFFFF"
                 android:textSize="34sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/imageButtonSearch"
@@ -74,13 +75,13 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/white"
-            app:tabIconTint="@color/black"
-            app:tabIndicator="@color/black"
-            app:tabIndicatorColor="#000000"
-            app:tabRippleColor="#A8A8A8"
-            app:tabSelectedTextColor="#000000"
-            app:tabTextColor="#000000" />
+            android:background="@color/background_color"
+            app:tabIconTint="@color/white"
+            app:tabIndicator="@color/white"
+            app:tabIndicatorColor="#FFFFFF"
+            app:tabRippleColor="#FFFFFF"
+            app:tabSelectedTextColor="#FFFFFF"
+            app:tabTextColor="#FFFFFF" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
@@ -108,9 +109,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="@color/white"
-        app:itemIconTint="@color/black"
-        app:itemTextColor="#000000"
+        android:background="@color/background_color"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
