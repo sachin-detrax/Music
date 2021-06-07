@@ -5,7 +5,6 @@ import android.os.Bundle;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.tabs.TabLayout;
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
@@ -13,7 +12,8 @@ import com.example.music.ui.main.SectionsPagerAdapter;
 import com.example.music.databinding.ActivitySongsPageBinding;
 
 public class SongsPageActivity extends AppCompatActivity {
-BottomNavigationView bottomNav;
+    BottomNavigationView bottomNav;
+    ViewPager viewPager;
     private ActivitySongsPageBinding binding;
 
     @Override
@@ -28,30 +28,29 @@ BottomNavigationView bottomNav;
         tabs.setupWithViewPager(viewPager);
         bottomNav=findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navlistener);
-        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,new HomeFragment()).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.view_pager,new HomeFragment()).commit();
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navlistener = new BottomNavigationView.OnNavigationItemSelectedListener() {
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Fragment selectedFragment=null;
+            viewPager = findViewById(R.id.view_pager);
             switch (item.getItemId())
             {
                 case R.id.nav_home:
-                    selectedFragment = new HomeFragment();
-                    break;
+                    viewPager.setCurrentItem(0);
+                    return true;
                 case R.id.nav_library:
-                    selectedFragment = new LibraryFragment();
-                    break;
+                    viewPager.setCurrentItem(1);
+                    return true;
                 case R.id.nav_settings:
-                    selectedFragment = new SettingsFragment();
-                    break;
+                    viewPager.setCurrentItem(2);
+                    return true;
                 case R.id.nav_exit:
-                    selectedFragment = new ExitFragment();
-                    break;
+                    viewPager.setCurrentItem(3);
+                    return true;
             }
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();
-            return  true;
+            return  false;
         }
     };
 
